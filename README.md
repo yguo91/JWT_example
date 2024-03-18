@@ -7,6 +7,8 @@ A simple example to directly send a JWT from login.php to secure_endpoint.php an
 ```
 composer install
 ```
+
+```
 composer require firebase/php-jwt
 ```
 
