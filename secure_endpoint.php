@@ -31,6 +31,8 @@ if (!empty($jwt)) {
             </body>
             </html>
         <?php
+        //show JWT token on page
+        //for debugging purposes only
         $wrappedMessage = wordwrap($jwt, 70, "\n", true);
         echo $wrappedMessage;
     } catch (Exception $e) {
