@@ -31,7 +31,8 @@ if (!empty($jwt)) {
             </body>
             </html>
         <?php
-        echo "Hello, " . $decoded->name;
+        $wrappedMessage = wordwrap($jwt, 70, "\n", true);
+        echo $wrappedMessage;
     } catch (Exception $e) {
         http_response_code(401);
         echo "Access denied: " . $e->getMessage();
