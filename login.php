@@ -8,8 +8,8 @@ $password = 'userPassword'; // Example user password
 $key = 'your_secret_key';
 
 $payload = [
-    "iss" => "http://example.org",
-    "aud" => "http://example.com",
+    "iss" => "http://example.org", //issuer
+    "aud" => "http://example.com", //audience
     "iat" => time(),
     "exp" => time() + (60*60), //one hour expiration
     "sub" => "1234567890",
@@ -17,7 +17,7 @@ $payload = [
     "email" => $email,
 ];
 
-$jwt = JWT::encode($payload, $key, 'HS256');
+$jwt = JWT::encode($payload, $key, 'HS256'); //HMAC SHA-256 algorithm-symmetric encryption
 
 // Initiate cURL session
 $url = 'http://localhost/secure_endpoint.php'; // Adjust the URL as needed

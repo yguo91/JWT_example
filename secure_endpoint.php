@@ -35,7 +35,7 @@ if (!empty($jwt)) {
         //show JWT token on page
         //for debugging purposes only
         $wrappedMessage = wordwrap($jwt, 70, "\n", true);
-        echo $wrappedMessage;
+        // echo $wrappedMessage;
     } catch (Exception $e) {
         http_response_code(401);
         echo "Access denied: " . $e->getMessage();
